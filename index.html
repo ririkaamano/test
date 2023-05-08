@@ -11,7 +11,7 @@
 <body>
     <section>
         <div class="inner-wrap">
-            <form action="xxx.html" method="get" name="qz_form">
+            <form action="" method="get" name="qz_form">
                 <div class="qz_box">
                     <h4>タイトル</h4>
                     <div class="qz_item">
@@ -20,31 +20,38 @@
                                 クイズの答え↓
                             </span>
                         </div>
-                        <input type="text" name="anser">
-                    </div>
-                    <div class="qz_item">
-                        <input type="submit" name="submitConfirm" value="確認画面へ" class="btn" onclick="return check()">
-                    </div>
+                        <input type="text" value="" id="text_1">
+                        <input type="button" value="送信" onclick="clickBtn1()">
                 </div>
             </form>
-
         </div>
-
     </section>
 </body>
-<script type="text/javascript">
-    const arr = [STAR, Star, star, ＳＴＡＲ, Ｓｔａｒ, ｓｔａｒ, スター, ｽﾀｰ, すたー, スタァ, スタア, ｽﾀｧ, ｽﾀｱ, すたあｚすたぁ]
-
-    function check() {
-        if (qz_form.anser.value == "") {
-            // zz(メールアドレスが空の場合)
-            alert("不正解!git commit -m '修正0507"); //エラーメッセージを出力
-            return false;
-        } else {
-            条件に一致しない場合(メールアドレスが入力されている場合)
-            return true; //送信ボタン本来の動作を実行します
-        }
+<script>
+  function clickBtn1() {
+    const star_n = document.getElementById("text_1").value;
+    switch (star_n) {
+        case "STAR":
+        case "Star":
+        case "star":
+        case "ＳＴＡＲ":
+        case "Ｓｔａｒ":
+        case "ｓｔａｒ":
+        case "スター":
+        case "ｽﾀｰ":
+        case "すたー":
+        case "スタァ":
+        case "スタア":
+        case "ｽﾀｧ":
+        case "ｽﾀｱ":
+        case "すたあ":
+        case "すたぁ":
+        alert("正解")
+            break;
+        default:
+        alert("不正解")
     }
+  }
 </script>
 
 </html>
